@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="w-100" style="max-width: 400px;">
+        <h2 class="text-center mb-4">Register</h2>
+        <form action="" method="POST" class="register-form">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" name="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" class="form-control" id="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirm" class="form-label">Confirm Password</label>
+                <input type="password" name="confirm" class="form-control" id="confirm" required>
+            </div>
+            <button class="btn btn-success w-100">Register</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block style %}
+<style>
+    .dark-mode .form-control {
+        background-color: #2a2a2a;
+        color: #f1f1f1;
+        border: 1px solid #555;
+    }
+
+    .register-form .form-label {
+        font-weight: bold;
+    }
+
+    .register-form .btn-success {
+        font-size: 16px;
+    }
+
+    .login-link, .register-link {
+        font-size: 14px;
+    }
+</style>
+{% endblock %}
